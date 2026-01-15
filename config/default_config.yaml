@@ -1,0 +1,23 @@
+model:
+  name: "distilgpt2"
+  device: "auto"
+  use_accelerate: true
+  torch_dtype: "auto"
+
+generation:
+  max_length: 100
+  num_return_sequences: 1
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  do_sample: true
+  repetition_penalty: 1.1
+
+ui:
+  title: "Sentiment-Controlled Text Generation"
+  description: "Generate text with controlled sentiment using AI"
+  max_prompt_length: 500
+  default_num_samples: 3
+
+logging_level: "INFO"
+cache_dir: "./cache"
